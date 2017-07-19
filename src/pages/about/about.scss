@@ -1,5 +1,21 @@
 page-about {
+    
+.toolbar-title.toolbar-title-md {
+         text-align: center;
+}
     h2 {
     color: red;
 }
+ion-card-header.card-header.card-header-md {
+    color: blue;
+    font-weight: bold;
+}
+
+ion-card-content.card-content.card-content-md {
+    font-weight: bolder;
+} 
+
+.background {
+        background-image: url('../assets/images/background.jpg');
+    }
 }

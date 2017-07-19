@@ -1,16 +1,24 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Pagina 1</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  <h2>Seja Bem vindo ao Meu App!</h2>
-  <p>
-    Esse Projeto está em desenvolvimento mais se baseia no uso de cards, e de muitos outros metodos de imagens para que 
-    haja melhor visualização do aplicativo
-  </p>
-  <p>
-    Você terá acesso a algumas opções de acesso no aplicativo, obrigado e espero que tenha uma boa experiência
-  </p>
+<ion-content class="background">
+  <ion-card class="bottom"> 
+    <ion-card-header> 
+       Login 
+    </ion-card-header> 
+    <ion-card-content > 
+      <ion-list no-line> 
+        <ion-item > 
+          <ion-input type="text" placeholder="Usuario"></ion-input> 
+        </ion-item> 
+         <ion-item> 
+          <ion-input type="password" placeholder="Senha"></ion-input> 
+        </ion-item>  
+        <a> Esqueceu seu Login? <b> Obtenha Ajuda para entrar </b></a> 
+        <button ion-button block outline color = "light">Entrar</button> 
+        <p>OU</p> 
+        <button ion-button block color="facebook">
+          <ion-icon name="facebook"></ion-icon> Login com Facebook 
+        </button>
+      </ion-list> 
+    </ion-card-content> 
+  </ion-card> 
+  <button class="bottom" ion-button clear full color = "light">Você não possui uma conta? Registre-se</button>      
 </ion-content>

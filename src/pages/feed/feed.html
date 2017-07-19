@@ -13,7 +13,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="background">
   <ion-card>
     <ion-card-header>
       Aviso!
@@ -22,27 +22,27 @@
       A aba de Feed, é onde ocorrem publicações, não use expressões abusivas, ou ofensivas em suas mensagens
     </ion-card-content>
   </ion-card>
-  <ion-card>
+  <ion-card *ngFor="let filme of lista_Filmes"> 
 
     <ion-item>
       <ion-avatar item-start>
         <img src="assets/images/Avatar_Goku.png">
       </ion-avatar>
-      <h2 class="feed_title">{{ obj_feed.titulo }}</h2>
-      <p class="feed_date">{{ obj_feed.date }}</p>
+      <h2 class="feed_title">{{ filme.original_title }}</h2>
+      <p class="feed_date">{{ filme.release_date }}</p>
     </ion-item>
 
-    <img src="assets/images/Imagem_Card1.png">
+    <img [src]=" 'https://image.tmdb.org/t/p/w300/' + filme.backdrop_path">
 
     <ion-card-content>
-      <p>{{ obj_feed.descricao }}</p>
+      <p>{{ filme.overview }}</p>
     </ion-card-content>
 
     <ion-row>
       <ion-col>
-        <button ion-button icon-left clear small>
-        <ion-icon name="thumbs-up"></ion-icon>
-        <div>{{ obj_feed.qntd_likes}}</div>
+        <button ion-button icon-left clear small >
+        <ion-icon name="thumbs-up"></ion-icon>        
+        <div>{{ obj_feed.qntd_likes }}</div> 
       </button>
       </ion-col>
       <ion-col>
@@ -66,7 +66,7 @@
         <img src="assets/images/marty-avatar.png">
       </ion-avatar>
       <h2 class="feed_title">{{ nomeUsuario2 }}</h2>
-      <p class="feed_date">16 de Julho de 2017</p>
+      <p class="feed_date">2017-06-20</p>
     </ion-item>
 
     <img src="assets/images/hungria.jpg">
@@ -78,8 +78,8 @@
     <ion-row>
       <ion-col>
         <button ion-button icon-left clear small>
-        <ion-icon name="thumbs-up"></ion-icon>
-        <div>2000 Likes</div>
+        <ion-icon name="thumbs-up"></ion-icon> 
+        <div>2000</div> 
       </button>
       </ion-col>
       <ion-col>
